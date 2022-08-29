@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://sanjayb06.github.io/tri1fastpages/2022/08/27/Primitives-Notebook.html" />
-<meta property="og:url" content="https://sanjayb06.github.io/tri1fastpages/2022/08/27/Primitives-Notebook.html" />
+<link rel="canonical" href="https://sanjayb06.github.io/tri1fastpages/2022/08/28/Primitives-Notebook.html" />
+<meta property="og:url" content="https://sanjayb06.github.io/tri1fastpages/2022/08/28/Primitives-Notebook.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-08-27T00:00:00-05:00" />
+<meta property="article:published_time" content="2022-08-28T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Title" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-27T00:00:00-05:00","datePublished":"2022-08-27T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://sanjayb06.github.io/tri1fastpages/2022/08/27/Primitives-Notebook.html"},"url":"https://sanjayb06.github.io/tri1fastpages/2022/08/27/Primitives-Notebook.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-28T00:00:00-05:00","datePublished":"2022-08-28T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://sanjayb06.github.io/tri1fastpages/2022/08/28/Primitives-Notebook.html"},"url":"https://sanjayb06.github.io/tri1fastpages/2022/08/28/Primitives-Notebook.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/tri1fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sanjayb06.github.io/tri1fastpages/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/tri1fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,13 +73,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-27T00:00:00-05:00" itemprop="datePublished">
-        Aug 27, 2022
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-28T00:00:00-05:00" itemprop="datePublished">
+        Aug 28, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -489,9 +489,70 @@ Hello World
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Type in a temperature in celsius: 10
-10 in celsius is 50.0 Farenheit.
+<pre>Type in a temperature in celsius: 5
+5 in celsius is 41.0 Farenheit.
 </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Hack: Nth Fibbonacci</span>
+<span class="kd">class</span> <span class="nc">Fibo</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
+
+        <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Type in a number &quot;</span><span class="p">);</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+            <span class="kt">int</span> <span class="n">i1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+            <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+            <span class="k">while</span> <span class="p">(</span><span class="n">count</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">)</span> <span class="p">{</span>
+
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">i1</span> <span class="o">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
+
+                <span class="kt">int</span> <span class="n">i3</span> <span class="o">=</span> <span class="n">i2</span> <span class="o">+</span> <span class="n">i1</span><span class="p">;</span>
+                <span class="n">i1</span> <span class="o">=</span> <span class="n">i2</span><span class="p">;</span>
+                <span class="n">i2</span> <span class="o">=</span> <span class="n">i3</span><span class="p">;</span>
+                <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+
+
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>  
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;That is not a valid temperature  &quot;</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+        
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Fibo</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Type in a number 5
+0 1 1 2 3 </pre>
 </div>
 </div>
 
@@ -505,7 +566,7 @@ Hello World
 
 
 
-  </div><a class="u-url" href="/tri1fastpages/2022/08/27/Primitives-Notebook.html" hidden></a>
+  </div><a class="u-url" href="/tri1fastpages/2022/08/28/Primitives-Notebook.html" hidden></a>
 </article>
 
       </div>
