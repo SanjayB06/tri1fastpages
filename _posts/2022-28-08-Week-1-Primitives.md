@@ -12,8 +12,9 @@ title: Week 0 - Tools
 
 ## Part 1 Fastpages
 
-- [Bash Notebook](https://kar722.github.io/fastpages/2022/08/28/Bash-Jupyter-Notebook.html)
-- [Java Primitives Notebook](https://kar722.github.io/fastpages/2022/08/28/Java-Primitives-Jupyter-Notebook.html)
+- [Bash Notebook](https://sanjayb06.github.io/tri1fastpages/2022/08/28/Bash-Notebook.html)
+- [Java Primitives Notebook](https://sanjayb06.github.io/tri1fastpages/2022/08/28/Primitives-Notebook.html)
 
 Code.org Learning
 
+![image](https://user-images.githubusercontent.com/70538669/187106991-55da1602-67e4-48f7-9e1c-788aed3258b4.png)
