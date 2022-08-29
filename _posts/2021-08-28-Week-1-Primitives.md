@@ -18,3 +18,17 @@ title: Week 1 - Primitives
 Code.org Learning
 
 ![image](https://user-images.githubusercontent.com/70538669/187106991-55da1602-67e4-48f7-9e1c-788aed3258b4.png)
+
+## Study Plan
+### Capture information that will grow to 10 CB Units
+- Daily CB videos
+  - Organize jupyter based on units w/ key code segments
+- Practice AP MCs and FRQs, especially near April
+- Collegeboard work and practice
+
+As AP Test date gets closer I will:
+- Take practice tests to determine strong and weak concepts
+  - Review old material and search for new resources
+- Take practice MCs
+- Take practice FRQs
+- Take full lenght, sit down, timed AP exams
