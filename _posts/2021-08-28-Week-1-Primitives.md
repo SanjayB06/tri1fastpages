@@ -10,12 +10,15 @@ title: Week 1 - Primitives
 
 [Issue](https://github.com/SanjayB06/tri1fastpages/issues/3)
 
-## Part 1 Fastpages
+## Notebooks 
 
 - [Bash Notebook](https://sanjayb06.github.io/tri1fastpages/2022/08/28/Bash-Notebook.html)
 - [Java Primitives Notebook](https://sanjayb06.github.io/tri1fastpages/2022/08/28/Primitives-Notebook.html)
 
-Code.org Learning
+## Productive Blogging
+- [Vocab Page Added](https://sanjayb06.github.io/tri1fastpages/vocab/)
+
+## Code.org Learning
 
 ![image](https://user-images.githubusercontent.com/70538669/187106991-55da1602-67e4-48f7-9e1c-788aed3258b4.png)
 
