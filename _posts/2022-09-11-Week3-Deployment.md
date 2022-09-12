@@ -16,7 +16,7 @@ title: Week 3 - Deployment
 
 ## Deployment 
 Screenshot of Current States
-
+[Link to site](http://sanjaycsa.tk/)
 
 ## If Notebook
 
