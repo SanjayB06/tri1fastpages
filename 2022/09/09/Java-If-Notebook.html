@@ -390,6 +390,10 @@ Invalid operator
 
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
 
+<span class="n">Scanner</span> <span class="n">newScanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;type a message&quot;</span><span class="p">);</span>
+<span class="n">String</span> <span class="n">message</span> <span class="o">=</span> <span class="n">newScanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
 
 
 <span class="n">String</span> <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
@@ -398,24 +402,24 @@ Invalid operator
 
 <span class="k">case</span> <span class="sc">&#39;r&#39;</span><span class="p">:</span>
 
-    <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;\u001B[31m&quot;</span> <span class="o">+</span> <span class="s">&quot;This text has color &quot;</span><span class="p">;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;\u001B[31m&quot;</span><span class="p">;</span>
 
     <span class="k">break</span><span class="p">;</span>
 
 <span class="k">case</span> <span class="sc">&#39;g&#39;</span><span class="p">:</span>
 
-    <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;\u001B[32m&quot;</span> <span class="o">+</span> <span class="s">&quot;This text has color &quot;</span><span class="p">;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;\u001B[32m&quot;</span><span class="p">;</span>
 
     <span class="k">break</span><span class="p">;</span>
 
 <span class="k">case</span> <span class="sc">&#39;b&#39;</span><span class="p">:</span>
 
-    <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;\u001B[34m&quot;</span> <span class="o">+</span>  <span class="s">&quot;This text has color &quot;</span><span class="p">;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;\u001B[34m&quot;</span><span class="p">;</span>
 
     <span class="k">break</span><span class="p">;</span>
 <span class="k">case</span> <span class="sc">&#39;y&#39;</span><span class="p">:</span>
 
-    <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;\u001B[33m&quot;</span> <span class="o">+</span>  <span class="s">&quot;This text has color &quot;</span><span class="p">;</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;\u001B[33m&quot;</span><span class="p">;</span>
 
     <span class="k">break</span><span class="p">;</span>
 
@@ -428,7 +432,7 @@ Invalid operator
 
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The final result: &quot;</span><span class="p">);</span>
 
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">output</span> <span class="o">+</span> <span class="n">color</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">output</span> <span class="o">+</span> <span class="n">message</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -441,9 +445,10 @@ Invalid operator
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Enter a color (r,g,b,y): r
+<pre>Enter a color (r,g,b,y): g
+type a message
 The final result: 
-<span class="ansi-red-fg">This text is r
+<span class="ansi-green-fg">fadfadf
 </span></pre>
 </div>
 </div>
