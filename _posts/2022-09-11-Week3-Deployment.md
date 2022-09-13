@@ -16,6 +16,8 @@ title: Week 3 - Deployment
 
 ## Deployment 
 Screenshot of Current States
+<img width="1435" alt="image" src="https://user-images.githubusercontent.com/70538669/189967664-c54a65c3-dfc7-4966-893c-28803d3fd95d.png">
+
 [Link to site](http://sanjaycsa.tk/)
 
 ## If Notebook
