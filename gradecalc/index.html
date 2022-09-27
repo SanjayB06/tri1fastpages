@@ -78,10 +78,6 @@ window.onload = wrap_img;
 </head>
 
 <div id="page-container" class="green-theme">
-<div class="theme-toggle">
-   <button onclick="theme()">Change Theme</button>
-
-</div>
 <h1 style="text-align: center; text-transform: uppercase">Final Grade Calculator</h1>
 <div class="grade-container">
     <input type="number" name="curr" id = "curr" placeholder="What is your current grade?">
@@ -131,7 +127,6 @@ function theme() {
 </script>
 <style>
 #page-container {
-    margin-left: 200px;
     position: relative;
     background-color: var(--bg-color);
     color: var(--main-color);
@@ -144,16 +139,17 @@ function theme() {
     text-align: center;
 }
 
-.grade-container {
+/* .grade-container {
     width: 70%;
     margin: 0 auto;
-}* {
+} */
+* {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
  }
  .grade-container {
-   width: 40%;
+   width: 50%;
    margin: auto;
    padding: 2em;
      /* the body of the calculator */
