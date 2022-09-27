@@ -4,21 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Week 1 - Primitives | fastpages</title>
+<title>Grade Calculator | fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Week 1 - Primitives" />
+<meta property="og:title" content="Grade Calculator" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A minimal example of using markdown with fastpages." />
-<meta property="og:description" content="A minimal example of using markdown with fastpages." />
-<link rel="canonical" href="https://sanjayb06.github.io/tri1fastpages/markdown/2021/08/28/Week-1-Primitives.html" />
-<meta property="og:url" content="https://sanjayb06.github.io/tri1fastpages/markdown/2021/08/28/Week-1-Primitives.html" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://sanjayb06.github.io/tri1fastpages/gradecalc/" />
+<meta property="og:url" content="https://sanjayb06.github.io/tri1fastpages/gradecalc/" />
 <meta property="og:site_name" content="fastpages" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-08-28T00:00:00-05:00" />
+<meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Week 1 - Primitives" />
+<meta property="twitter:title" content="Grade Calculator" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-08-28T00:00:00-05:00","datePublished":"2021-08-28T00:00:00-05:00","description":"A minimal example of using markdown with fastpages.","headline":"Week 1 - Primitives","mainEntityOfPage":{"@type":"WebPage","@id":"https://sanjayb06.github.io/tri1fastpages/markdown/2021/08/28/Week-1-Primitives.html"},"url":"https://sanjayb06.github.io/tri1fastpages/markdown/2021/08/28/Week-1-Primitives.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Grade Calculator","url":"https://sanjayb06.github.io/tri1fastpages/gradecalc/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/tri1fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sanjayb06.github.io/tri1fastpages/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/tri1fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -70,96 +69,132 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+        <!DOCTYPE html>
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Week 1 - Primitives</h1><p class="page-description">A minimal example of using markdown with fastpages.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-08-28T00:00:00-05:00" itemprop="datePublished">
-        Aug 28, 2021
-      </time>
-       • <span class="read-time" title="Estimated read time">
-    
-    
-      1 min read
-    
-</span></p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grade calculator</title>
+</head>
 
-    
-      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
-      
-        <a class="category-tags-link" href="/tri1fastpages/categories/#markdown">markdown</a>
-        
-      
-      </p>
-    
+<div id="page-container" class="green-theme">
+<div class="theme-toggle">
+   <button onclick="theme()">Change Theme</button>
 
-    </header>
+</div>
+<h1 style="text-align: center; text-transform: uppercase">Final Grade Calculator</h1>
+<div class="grade-container">
+    <input type="number" name="curr" id = "curr" placeholder="What is your current grade?">
+    <input type="number" name="goal" id = "goal" placeholder="What is your goal for the class?">
+    <input type="number" name="weight" id = "weight" placeholder="How much is the test worth?" min=0 max=100>
+    <button onclick="calcgrade()" id="calc-btn" class='btn'>Submit</button>
+    <p id="result"></p>
+    <p id="test"></p>
+</div>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#hacks">Hacks</a>
-<ul>
-<li class="toc-entry toc-h2"><a href="#notebooks">Notebooks</a></li>
-<li class="toc-entry toc-h2"><a href="#productive-blogging">Productive Blogging</a></li>
-<li class="toc-entry toc-h2"><a href="#codeorg-learning">Code.org Learning</a></li>
-<li class="toc-entry toc-h2"><a href="#study-plan">Study Plan</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#capture-information-that-will-grow-to-10-cb-units">Capture information that will grow to 10 CB Units</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul><h1 id="hacks">
-<a class="anchor" href="#hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks</h1>
+</div>
+<script>
+    var stored = localStorage.getItem("theme");
+    var current = document.getElementById("page-container").classList[0];
+    document.getElementById("page-container").classList.remove(current);
+    document.getElementById("page-container").classList.add(stored)
+</script>
+<script>
+function calcgrade() {
+      var curr = document.getElementById("curr").value;
+      var goal = document.getElementById("goal").value;
+      var weight = document.getElementById("weight").value;
+      if ((! curr) || (! goal) || (! weight)) {
+            console.log("situation 0");
+            document.getElementById("test").innerText = "Please fill out all the fields."
+      } else {
+          console.log("situation 1");
+          other = (curr/100)*(100-weight);
+          var needed = +(((goal-other)*100)/weight).toFixed(2);
+          document.getElementById("test").innerText = "You needed a " + needed + "% to get a " + goal + "% in the class."
+      }
+}
+function theme() {
+       var themes = ["purple","green","light","blue","dark"]
+       var theme = document.getElementById("page-container").classList[0];
+       var generated = themes[Math.floor(Math.random() * themes.length)];
+       var new_theme = generated + "-theme"
+       while (new_theme == theme) {
+           var generated = themes[Math.floor(Math.random() * themes.length)];
+           var new_theme = generated + "-theme"
+       }
+       document.getElementById("page-container").classList.remove(theme);
+       document.getElementById("page-container").classList.add(new_theme);
+       localStorage.setItem("theme",new_theme);
+       document.getElementById("current").innerText = generated;
+}
+</script>
+<style>
+#page-container {
+    margin-left: 200px;
+    position: relative;
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    min-height: 100vh;
+}
+.theme-toggle {
+    position: absolute;
+    top: 0;
+    right:0;
+    text-align: center;
+}
 
-<p><a href="https://github.com/SanjayB06/tri1fastpages/issues/3">Issue</a></p>
+.grade-container {
+    width: 70%;
+    margin: 0 auto;
+}* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+ .grade-container {
+   width: 40%;
+   margin: auto;
+   padding: 2em;
+     /* the body of the calculator */
+   background-color: var(--secondary-color);
+ }
+ 
+ .grade-container input{
+   width: 100%;
+   padding: 2em;
+   border: none;
+   outline: none;
+   margin-bottom: 30px;
+     /* the box of the calculator */
+   background-color: var(--main-color);
+   color: var(--secondary-color);
+ }
+ .grade-container input:focus {
+   background-color: var(--tertiary-color);
+   color: var(--secondary-color)
+ }
+ .grade-container input::placeholder {
+    color: var(--tertiary-color)
+ }
+ .grade-container input:focus::placeholder {
+    color: var(--secondary-color)
+ }
+ #calc-btn {
+   width: 100%;
+ }
 
-<h2 id="notebooks">
-<a class="anchor" href="#notebooks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notebooks</h2>
+ #test {
+   text-align: center;
+   font-size: 24px;
+   color: var(--tertiary-color)
+ }
+ 
 
-<ul>
-  <li><a href="https://sanjayb06.github.io/tri1fastpages/2022/08/28/Bash-Notebook.html">Bash Notebook</a></li>
-  <li><a href="https://sanjayb06.github.io/tri1fastpages/2022/08/28/Primitives-Notebook.html">Java Primitives Notebook</a></li>
-</ul>
+</style>
 
-<h2 id="productive-blogging">
-<a class="anchor" href="#productive-blogging" aria-hidden="true"><span class="octicon octicon-link"></span></a>Productive Blogging</h2>
-<ul>
-  <li><a href="https://sanjayb06.github.io/tri1fastpages/vocab/">Vocab Page Added</a></li>
-</ul>
+</html>
 
-<h2 id="codeorg-learning">
-<a class="anchor" href="#codeorg-learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code.org Learning</h2>
-
-<p><img src="https://user-images.githubusercontent.com/70538669/187106991-55da1602-67e4-48f7-9e1c-788aed3258b4.png" alt="image"></p>
-
-<h2 id="study-plan">
-<a class="anchor" href="#study-plan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Study Plan</h2>
-<h3 id="capture-information-that-will-grow-to-10-cb-units">
-<a class="anchor" href="#capture-information-that-will-grow-to-10-cb-units" aria-hidden="true"><span class="octicon octicon-link"></span></a>Capture information that will grow to 10 CB Units</h3>
-<ul>
-  <li>Daily CB videos
-    <ul>
-      <li>Organize jupyter based on units w/ key code segments</li>
-    </ul>
-  </li>
-  <li>Practice AP MCs and FRQs, especially near April</li>
-  <li>Collegeboard work and practice</li>
-</ul>
-
-<p>As AP Test date gets closer I will:</p>
-<ul>
-  <li>Take practice tests to determine strong and weak concepts
-    <ul>
-      <li>Review old material and search for new resources</li>
-    </ul>
-  </li>
-  <li>Take practice MCs</li>
-  <li>Take practice FRQs</li>
-  <li>Take full lenght, sit down, timed AP exams</li>
-</ul>
-
-  </div><a class="u-url" href="/tri1fastpages/markdown/2021/08/28/Week-1-Primitives.html" hidden></a>
-</article>
 
       </div>
     </main><footer class="site-footer h-card">

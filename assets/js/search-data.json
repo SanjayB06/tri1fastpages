@@ -216,9 +216,6 @@
   
 
   
-  
-
-  
 
   
   
@@ -226,7 +223,12 @@
   
 
   
-      ,"page7": {
+  
+
+  
+
+  
+      ,"page8": {
           "title": "Vocab",
           "content": "This is where vocab will be added throughout the year .",
           "url": "https://sanjayb06.github.io/tri1fastpages/vocab/",
@@ -248,7 +250,7 @@
   
 
   
-      ,"page12": {
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://sanjayb06.github.io/tri1fastpages/robots.txt",
