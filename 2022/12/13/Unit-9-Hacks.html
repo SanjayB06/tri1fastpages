@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -125,6 +125,122 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Unit-9-HW-Team-3---Sanjay,-Karthik,-Evan,-Pranav,-Jay-()">Unit 9 HW Team 3 - Sanjay, Karthik, Evan, Pranav, Jay ()<a class="anchor-link" href="#Unit-9-HW-Team-3---Sanjay,-Karthik,-Evan,-Pranav,-Jay-()"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Country</span> <span class="p">{</span>
+    <span class="kd">protected</span> <span class="n">String</span> <span class="n">countryName</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="kt">double</span> <span class="n">countryType</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="kt">double</span> <span class="n">countryLocation</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="kt">double</span> <span class="n">GDP</span><span class="p">;</span>
+    <span class="c1">// Constructor for the attributes present in the superclass</span>
+    <span class="kd">public</span> <span class="nf">Country</span><span class="p">(</span><span class="n">String</span> <span class="n">countryName</span><span class="p">,</span> <span class="kt">double</span> <span class="n">countryType</span><span class="p">,</span> <span class="kt">double</span> <span class="n">countryLocation</span><span class="p">,</span> <span class="kt">double</span> <span class="n">GDP</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">countryName</span> <span class="o">=</span> <span class="n">countryName</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">countryType</span> <span class="o">=</span> <span class="n">countryType</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">countryLocation</span> <span class="o">=</span> <span class="n">countryLocation</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">GDP</span> <span class="o">=</span> <span class="n">GDP</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">name</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Country: America&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">type</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Type: Advanced&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">size</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Size: Huge&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">location</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Continent: North America&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">GDP</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Money: Rich&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">America</span> <span class="kd">extends</span> <span class="n">Country</span> <span class="p">{</span>
+    <span class="c1">// Additional attribute not present in the superclass</span>
+    <span class="kd">protected</span> <span class="n">String</span> <span class="n">GDPtype</span><span class="p">;</span>
+    <span class="c1">// Constructor for Subclass</span>
+    <span class="kd">public</span> <span class="nf">America</span><span class="p">(</span><span class="n">String</span> <span class="n">countryName</span><span class="p">,</span> <span class="kt">double</span> <span class="n">countryType</span><span class="p">,</span> <span class="kt">double</span> <span class="n">countryLocation</span><span class="p">,</span> <span class="kt">double</span> <span class="n">GDP</span><span class="p">,</span> <span class="n">String</span> <span class="n">GDPtype</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// We use the Superclass constructor for the shared attributes through the keyword &quot;super&quot;</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">countryName</span><span class="p">,</span> <span class="n">countryType</span><span class="p">,</span> <span class="n">countryLocation</span><span class="p">,</span> <span class="n">GDP</span><span class="p">);</span>
+        <span class="c1">// hornSound is not in the Superclass, so we add it separately in the constructor</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">GDPtype</span> <span class="o">=</span> <span class="n">GDPtype</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// We use override to change the functionality in the subclass of an existing method in the superclass</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">size</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3.797 Million Miles^2 &quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">location</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Between Canada and Mexico&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">// Here, we don&#39;t fully change the functionality of the existing horn method in the superclass</span>
+    <span class="c1">// Instead, we take all of the functionality of the superclass method, and then add on to it</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">GDP</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">GDP</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">GDPtype</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 5 argument constructor</span>
+        <span class="n">America</span> <span class="n">modelS</span> <span class="o">=</span> <span class="k">new</span> <span class="n">America</span><span class="p">(</span><span class="s">&quot;Tesla&quot;</span><span class="p">,</span> <span class="mi">396</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s">&quot;Asf&quot;</span><span class="p">);</span>
+        <span class="c1">// Example of late binding</span>
+        <span class="n">Country</span> <span class="n">country</span> <span class="o">=</span> <span class="k">new</span> <span class="n">America</span><span class="p">(</span><span class="s">&quot;Tesla&quot;</span><span class="p">,</span> <span class="mi">396</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s">&quot;Asf&quot;</span><span class="p">);</span>
+        <span class="c1">// We can still use the methods from the child class, even though we didn&#39;t mention them in the subclass!</span>
+        <span class="n">modelS</span><span class="p">.</span><span class="na">name</span><span class="p">();</span>
+        <span class="c1">// Using the overridden method</span>
+        <span class="n">modelS</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+        <span class="n">modelS</span><span class="p">.</span><span class="na">type</span><span class="p">();</span>
+        <span class="n">modelS</span><span class="p">.</span><span class="na">location</span><span class="p">();</span>
+        <span class="c1">// Using the method we added on to</span>
+        <span class="n">modelS</span><span class="p">.</span><span class="na">GDP</span><span class="p">();</span>
+        <span class="n">country</span><span class="p">.</span><span class="na">GDP</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">America</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Acountry</span> <span class="kd">extends</span> <span class="n">Country</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Acountry</span> <span class="p">(</span><span class="n">String</span> <span class="n">countryName</span><span class="p">,</span> <span class="kt">double</span> <span class="n">countryType</span><span class="p">,</span> <span class="kt">double</span> <span class="n">countryLocation</span><span class="p">,</span> <span class="kt">double</span> <span class="n">GDP</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">countryName</span><span class="p">,</span> <span class="n">countryType</span><span class="p">,</span> <span class="n">countryLocation</span><span class="p">,</span> <span class="n">GDP</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">size</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The Fourth Largest Country!&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">dimensions</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Length is &quot;</span> <span class="o">+</span> <span class="n">a</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">dimensions</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Length is &quot;</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">&quot; and height is &quot;</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 4 superclass argument constructor</span>
+        <span class="n">Acountry</span> <span class="n">country2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Acountry</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">,</span> <span class="mi">348</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">145</span><span class="p">);</span>
+        <span class="c1">// Using the overridden method</span>
+        <span class="n">country2</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+        <span class="c1">// Using the overloaded method</span>
+        <span class="n">country2</span><span class="p">.</span><span class="na">dimensions</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+        <span class="n">country2</span><span class="p">.</span><span class="na">dimensions</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">6100</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Acountry</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
