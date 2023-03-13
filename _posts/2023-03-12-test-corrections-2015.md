@@ -27,9 +27,3 @@ title: 2015 Practice Quiz
 - Answer B is correct because it shows that the list never actually changes after the code snippet. 
 - I can watch 2.7 daily videos 1-3 and 7.4 daily video 2 to learn this concept. 
 
-## Question 52
-
-- I got this question wrong because I did not follow the logic properly and got confused in the second nested loop. 
-- Answer E is correct because it methodically walks through the second nested loop and fills in all the X's in the right locations. 
-- I can watch 8.2 videos 1-3 to learn this concept. 
-
