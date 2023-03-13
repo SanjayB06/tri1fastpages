@@ -1,13 +1,13 @@
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Data Types</h1><p class="page-description">Data Structures Tri 3</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-12T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Data Types</h1><p class="page-description">Data Types</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-12T00:00:00-06:00" itemprop="datePublished">
         Mar 12, 2023
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -24,201 +24,183 @@
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#int">int</a></li>
-<li class="toc-entry toc-h2"><a href="#wrapper-class-integer">Wrapper Class Integer</a></li>
-<li class="toc-entry toc-h2"><a href="#double">double</a></li>
-<li class="toc-entry toc-h2"><a href="#wrapper-class-double">Wrapper Class Double</a></li>
-<li class="toc-entry toc-h2"><a href="#boolean">boolean</a></li>
-<li class="toc-entry toc-h2"><a href="#wrapper-class-boolean">Wrapper Class Boolean</a></li>
-<li class="toc-entry toc-h2"><a href="#char">char</a></li>
-<li class="toc-entry toc-h2"><a href="#wrapper-class-character">Wrapper Class Character</a></li>
-<li class="toc-entry toc-h1"><a href="#exploring-teacher-code">Exploring Teacher Code</a>
+<li class="toc-entry toc-h1"><a href="#binary">Binary</a></li>
+<li class="toc-entry toc-h1"><a href="#primitive-examples">Primitive Examples</a></li>
+<li class="toc-entry toc-h1"><a href="#wrapper-class-examples">Wrapper Class Examples</a></li>
+<li class="toc-entry toc-h1"><a href="#methods-and-control-structures">Methods and Control Structures</a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#methods">Methods</a></li>
 <li class="toc-entry toc-h2"><a href="#control-structures">Control Structures</a></li>
-<li class="toc-entry toc-h2"><a href="#mathrandom">Math.random</a></li>
-<li class="toc-entry toc-h2"><a href="#ap-frq-2019">AP FRQ 2019</a></li>
+<li class="toc-entry toc-h2"><a href="#methods-and-control-structures-in-methoddatatypes">Methods and Control Structures in methodDataTypes</a></li>
 </ul>
 </li>
-</ul><h2 id="int">
-<a class="anchor" href="#int" aria-hidden="true"><span class="octicon octicon-link"></span></a>int</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int[] intArray = new int[]{1, 2, 3, 4, 5};
-int randomInt = intArray[(int) (Math.random() * intArray.length)];
-</code></pre></div></div>
-
-<h2 id="wrapper-class-integer">
-<a class="anchor" href="#wrapper-class-integer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wrapper Class Integer</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Integer[] integerArray = new Integer[]{1, 2, 3, 4, 5};
-Integer randomInteger = integerArray[(int) (Math.random() * integerArray.length)];
-</code></pre></div></div>
-
-<p><br></p>
-
-<h2 id="double">
-<a class="anchor" href="#double" aria-hidden="true"><span class="octicon octicon-link"></span></a>double</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>double[] doubleArray = new double[]{4.76, 9.87, 31.1, 16.8, 132.0};
-double randomDouble = doubleArray[(int) (Math.random() * doubleArray.length)];
-</code></pre></div></div>
-<h2 id="wrapper-class-double">
-<a class="anchor" href="#wrapper-class-double" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wrapper Class Double</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Double[] doubleArray = new Double[]{1.2, 2.4, 3.6, 4.8, 5.0};
-Double randomDouble = doubleArray[(int) (Math.random() * doubleArray.length)];
-</code></pre></div></div>
-
-<p><br></p>
-
-<h2 id="boolean">
-<a class="anchor" href="#boolean" aria-hidden="true"><span class="octicon octicon-link"></span></a>boolean</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>boolean[] booleanArray = new boolean[]{true, false, true, false, true};
-boolean randomBoolean = booleanArray[(int) (Math.random() * booleanArray.length)];
-</code></pre></div></div>
-
-<h2 id="wrapper-class-boolean">
-<a class="anchor" href="#wrapper-class-boolean" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wrapper Class Boolean</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Boolean[] booleanArray = new Boolean[]{true, false, true, false, true};
-Boolean randomBoolean = booleanArray[(int) (Math.random() * booleanArray.length)];
-</code></pre></div></div>
-
-<p><br></p>
-
-<h2 id="char">
-<a class="anchor" href="#char" aria-hidden="true"><span class="octicon octicon-link"></span></a>char</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String charString = "hello";
-char[] charArray = charString.toCharArray();
-String randomCharString = charString.substring((int) (Math.random() * charString.length()), (int) (Math.random() * charString.length() + 1));
-char randomChar = randomCharString.charAt(0);
-</code></pre></div></div>
-
-<h2 id="wrapper-class-character">
-<a class="anchor" href="#wrapper-class-character" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wrapper Class Character</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String charString = "hello";
-Character[] charArray = ArrayUtils.toObject(charString.toCharArray());
-String randomCharString = charString.substring((int) (Math.random() * charString.length()), (int) (Math.random() * charString.length() + 1));
-Character randomChar = randomCharString.charAt(0);
-</code></pre></div></div>
-<h1 id="exploring-teacher-code">
-<a class="anchor" href="#exploring-teacher-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploring Teacher Code</h1>
-<p><a href="https://github.com/nighthawkcoders/spring_portfolio/blob/master/src/main/java/com/nighthawk/hacks/methodsDataTypes/Menu.java">Menu.java</a></p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Driver {
-    /**
-     *  Menu Control Example
-     */
+<li class="toc-entry toc-h1"><a href="#2015-frq-question-1">2015 FRQ Question 1</a></li>
+</ul><h1 id="binary">
+<a class="anchor" href="#binary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary</h1>
+<p>import java.util.Scanner;
+public class Binary {
+   public static void main(String[] args)
+   {
+    //Two variables
+    int i = 0, carry = 0;
+    //This is to hold the output binary number
+    int[] sum = new int[10];
+    int b1 = 1;
+    int b2 = 1;
+    while (b1 != 0 || b2 != 0)
+    {
+        sum[i++] = (int)((b1 % 10 + b2 % 10 + carry) % 2);
+        carry = (int)((b1 % 10 + b2 % 10 + carry) / 2);
+        b1 = b1 / 10;
+        b2 = b2 / 10;
+    }
+    if (carry != 0) {
+        sum[i++] = carry;
+    }
+    –i;
+    System.out.print(“1 + 1 = “);
+    while (i &gt;= 0) {
+        System.out.print(sum[i–]);
+    }
+    System.out.print(“\n”);
+   }
+}
+Binary.main(null);</p>
+<h1 id="primitive-examples">
+<a class="anchor" href="#primitive-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Primitive Examples</h1>
+<p>import java.util.Random;
+public class PrimitiveTypesExample {
     public static void main(String[] args) {
-        // Row initialize
-        MenuRow[] rows = new MenuRow[]{
-            // lambda style, () -&gt; to point to Class.Method
-            new MenuRow("Exit", () -&gt; main(null)),
-            new MenuRow("Do Nothing", () -&gt; DoNothingByValue.main(null)),
-            new MenuRow("Swap if Hi-Low", () -&gt; IntByReference.main(null)),
-            new MenuRow("Matrix Reverse", () -&gt; Matrix.main(null)),
-            new MenuRow("Diverse Array", () -&gt; Matrix.main(null)),
-            new MenuRow("Random Squirrels", () -&gt; Number.main(null))
-        };
-
-        // Menu construction
-        Menu menu = new Menu(rows);
-
-        // Run menu forever, exit condition contained in loop
-        while (true) {
-            System.out.println("Hacks Menu:");
-            // print rows
-            menu.print();
-
-            // Scan for input
-            try {
-                Scanner scan = new Scanner(System.in);
-                int selection = scan.nextInt();
-
-                // menu action
-                try {
-                    MenuRow row = menu.get(selection);
-                    // stop menu
-                    if (row.getTitle().equals("Exit")) {
-                        if (scan != null) 
-                            scan.close();  // scanner resource requires release
-                        return;
-                    }
-                    // run option
-                    row.run();
-                } catch (Exception e) {
-                    System.out.printf("Invalid selection %d\n", selection);
-                }
-
-            } catch (Exception e) {
-                System.out.println("Not a number");
-            }
-        }
+        // int example
+        int[] numbers = {1, 2, 3, 4, 5};
+        int randomNumber = new Random().nextInt(numbers.length);
+        System.out.println(“Random number from array: “ + numbers[randomNumber]);
+        // double example
+        double pi = 3.141592653589793238;
+        System.out.println(“Pi: “ + pi);
+        // boolean example
+        boolean isJavaFun = true;
+        System.out.println(“What’s Up “ + whatsup);
+        // char example
+        String message = “Sup SanjaB”;
+        char firstLetter = message.charAt(0);
+        System.out.println(“First letter of message: “ + firstLetter);
     }
 }
-</code></pre></div></div>
-<p>The code above uses try-catch blocks to handle exceptions and Runnable to control program execution.</p>
-
-<p>The “DiverseArrays” and “Matrix” classes demonstrate the application of control structures and data types in programming. These classes use arrays, loops, and conditionals to perform various tasks, such as finding the sum and average of elements in an array or matrix.</p>
-
-<p>The “DoNothingByValue” and “IntByReference” classes demonstrate the concepts of pass-by-value and pass-by-reference, respectively. These are important concepts in Java, and understanding them is crucial for writing efficient and effective code.</p>
-
+PrimitiveTypesExample.main(null);</p>
+<h1 id="wrapper-class-examples">
+<a class="anchor" href="#wrapper-class-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wrapper Class Examples</h1>
+<p>import java.util.Arrays;
+public class PrimitiveTypesExample {
+    public static void main(String[] args) {
+        // int example with wrapper class
+        Integer[] numbers = {1, 2, 3, 4, 5};
+        int sum = Arrays.stream(numbers).mapToInt(Integer::intValue).sum();
+        System.out.println(“Sum of numbers: “ + sum);
+        // double example with wrapper class
+        Double[] temperatures = {25.6, 28.9, 30.1, 23.4, 21.0};
+        double average = Arrays.stream(temperatures).mapToDouble(Double::doubleValue).average().getAsDouble();
+        System.out.println(“Average temperature: “ + average);
+        // boolean example with wrapper class
+        Boolean[] choices = {true, false, false, true};
+        long countTrue = Arrays.stream(choices).filter(Boolean::booleanValue).count();
+        System.out.println(“Number of true choices: “ + countTrue);
+        // char example with wrapper class
+        Character[] letters = {‘H’, ‘e’, ‘l’, ‘l’, ‘o’, ‘,’, ‘ ‘, ‘w’, ‘o’, ‘r’, ‘l’, ‘d’, ‘!’};
+        String message = Arrays.stream(letters).map(Object::toString).reduce(“”, String::concat);
+        System.out.println(“Message: “ + message);
+    }
+}
+PrimitiveTypesExample.main(null);</p>
+<h1 id="methods-and-control-structures">
+<a class="anchor" href="#methods-and-control-structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods and Control Structures</h1>
 <h2 id="methods">
 <a class="anchor" href="#methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods</h2>
-<p>Methods are reusable code blocks that perform a specific task. They help in reducing code duplication, improving code readability, and making the code modular. In Java, a method is defined using the keyword ‘void’ (if it doesn’t return anything) or the data type it returns, followed by the method name, and the parameters it takes (if any).</p>
-
+<p>In Java, a method is a set of code that performs a specific task. Methods enable code reusability and modularity. A method can receive parameters as input and return a value as output.</p>
 <h2 id="control-structures">
 <a class="anchor" href="#control-structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Control Structures</h2>
-<p>Control structures are programming constructs that determine the order in which statements are executed in a program. They control the flow of the program, based on certain conditions or criteria. Java has several types of control structures, including if-else, switch, while, do-while, and for loops.</p>
-
-<h2 id="mathrandom">
-<a class="anchor" href="#mathrandom" aria-hidden="true"><span class="octicon octicon-link"></span></a>Math.random</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+<p>Control structures are programming statements that manage the program’s execution flow. In Java, conditional statements, loops, and switch statements are the common control structures.</p>
+<h2 id="methods-and-control-structures-in-methoddatatypes">
+<a class="anchor" href="#methods-and-control-structures-in-methoddatatypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods and Control Structures in methodDataTypes</h2>
+<p>methodDataTypes is a Java project consisting of various classes that exemplify the use of methods and control structures. For instance, the DiverseArrays and Matrix classes demonstrate the use of control structures like loops and conditional statements to perform operations on arrays and matrices. The Number and Random classes demonstrate the use of control structures for performing operations on numbers, and the DoNothingByValue and IntByReference classes illustrate how passing parameters to methods works. Lastly, the Menu class demonstrates the use of control structures to control the flow of execution of the program.
+import java.util.Scanner;
+public class Menu {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int choice = 0;
+        Runnable menuRunnable = () -&gt; {
+            System.out.println(“Menu:”);
+            System.out.println(“1. Option 1”);
+            System.out.println(“2. Option 2”);
+            System.out.println(“3. Option 3”);
+            System.out.println(“4. Exit”);
+            System.out.print(“Enter your choice: “);
+        };
+        while (choice != 4) {
+            try {
+                menuRunnable.run();
+                choice = scanner.nextInt();
+                scanner.nextLine();
+                switch (choice) {
+                    case 1:
+                        System.out.println(“Option 1 selected”);
+                        break;
+                    case 2:
+                        System.out.println(“Option 2 selected”);
+                        break;
+                    case 3:
+                        System.out.println(“Option 3 selected”);
+                        break;
+                    case 4:
+                        System.out.println(“Goodbye!”);
+                        break;
+                    default:
+                        System.out.println(“Invalid choice!”);
+                        break;
+                }
+            } catch (Exception e) {
+                System.out.println(“Invalid input. Please try again.”);
+                scanner.nextLine();
+            }
+        }
+        scanner.close();
+    }
 }
-
-console.log(getRandomInt(3));
-// Expected output: 0, 1 or 2
-
-console.log(getRandomInt(1));
-// Expected output: 0
-
-console.log(Math.random());
-// Expected output: a number from 0 to &lt;1
-</code></pre></div></div>
-
-<h2 id="ap-frq-2019">
-<a class="anchor" href="#ap-frq-2019" aria-hidden="true"><span class="octicon octicon-link"></span></a>AP FRQ 2019</h2>
-<p>Part a</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public ArrayList&lt;String&gt; getDelimitersList(String[] tokens) 
-{     
-  ArrayList&lt;String&gt; d = new ArrayList&lt;String&gt;();    
-  for (String str : tokens)    
-  {       
-    if (str.equals(openDel) || str.equals(closeDel))       
-    {          d.add(str);       
-    }    
-}    
-return d; 
-} 
-</code></pre></div></div>
-
-<p>Part b</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public boolean isBalanced(ArrayList &lt; String &gt; delimiters) {
-  int openCount = 0;
-  int closeCount = 0;
-  for (String str: delimiters) {
-    if (str.equals(openDel)) {
-      openCount++;
-    } else {
-      closeCount++;
-    }
-    if (closeCount &gt; openCount) {
-      return false;
-    }
+Menu.main(null);</p>
+<h1 id="2015-frq-question-1">
+<a class="anchor" href="#2015-frq-question-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>2015 FRQ Question 1</h1>
+<p>a.
+public static int arraySum(int[] arr) {
+    int sum = 0;
+    for (int n: arr)
+      sum += n;
+    return sum;
   }
-  if (openCount == closeCount) {
+The code defines a method named arraySum that takes an array of integers as input and returns the sum of all the integers in the array. It starts by initializing a variable sum to zero, and then loops through the elements in the array using a for-each loop. In each iteration, it adds the current element to the sum variable. Finally, it returns the sum variable which holds the total sum of all elements in the array.
+b.
+public static int[] rowSums(int[][] arr2D) {
+    int[] sums = new int[arr2D.length];
+    for (int i = 0; i &lt; sums.length; i++) {
+      sums[i] = arraySum(arr2D[i]);
+    }
+    return sums;
+  }
+The code defines a static method called rowSums that takes a two-dimensional integer array arr2D as an input and returns a one-dimensional integer array. The method initializes a new integer array sums with the same length as the number of rows in the input array.
+The method then iterates through each row in the input array using a for loop. For each row, it calls another method called arraySum to calculate the sum of all the elements in the row. The result is stored in the corresponding index of the sums array.
+Finally, the method returns the sums array containing the sum of each row in the input array.
+In summary, the rowSums method calculates the sum of each row in a two-dimensional integer array and returns the result in a new one-dimensional integer array.
+c.
+public static boolean isDiverse(int[][] arr2D) {
+    int[] sums = rowSums(arr2D);
+    for (int i = 0; i &lt; sums.length; i++)
+      for (int j = i + 1; j &lt; sums.length; j++)
+        if (sums[i] == sums[j])
+          return false;
     return true;
-  } else {
-    return false;
-  }
 }
-</code></pre></div></div>
-
+The isDiverse method is a static method that takes a two-dimensional integer array as input and returns a boolean value. It uses the rowSums method to calculate the sum of each row of the input array and stores the resulting sums in a new array called sums.
+The method then compares each sum in the sums array with all other sums in the array to determine whether any two rows have the same sum. If it finds any such duplicate sums, it immediately returns false to indicate that the input array is not diverse. Otherwise, if it reaches the end of the loops without finding any duplicates, it returns true to indicate that the input array is diverse.
+In essence, the isDiverse method checks whether a two-dimensional array is diverse, meaning that none of its rows has the same sum as any other row, by calculating row sums and comparing them to one another.</p>
 
   </div><a class="u-url" href="/tri1fastpages/markdown/2023/03/12/Hacks-Week-1.html" hidden></a>
 </article>
