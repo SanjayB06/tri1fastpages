@@ -113,9 +113,7 @@ window.onload = wrap_img;
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Binary</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span>
    <span class="o">{</span>
-    <span class="c1">//Two variables</span>
     <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">carry</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-    <span class="c1">//This is to hold the output binary number</span>
     <span class="kt">int</span><span class="o">[]</span> <span class="n">sum</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">];</span>
     <span class="kt">int</span> <span class="n">b1</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
     <span class="kt">int</span> <span class="n">b2</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
@@ -144,23 +142,19 @@ window.onload = wrap_img;
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Random</span><span class="o">;</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">PrimitiveTypesExample</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">// int example</span>
         <span class="kt">int</span><span class="o">[]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">};</span>
         <span class="kt">int</span> <span class="n">randomNumber</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Random</span><span class="o">().</span><span class="na">nextInt</span><span class="o">(</span><span class="n">numbers</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"random: "</span> <span class="o">+</span> <span class="n">numbers</span><span class="o">[</span><span class="n">randomNumber</span><span class="o">]);</span>
 
 
-        <span class="c1">// double example</span>
         <span class="kt">double</span> <span class="n">e</span> <span class="o">=</span> <span class="mf">2.7182818284590452353602874713527</span><span class="o">;</span>
         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Euler's number: "</span> <span class="o">+</span> <span class="n">e</span><span class="o">);</span>
 
 
-        <span class="c1">// boolean example</span>
         <span class="kt">boolean</span> <span class="n">raining</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Is it raining? "</span> <span class="o">+</span> <span class="n">raining</span><span class="o">);</span>
 
 
-        <span class="c1">// char example</span>
         <span class="nc">String</span> <span class="n">message</span> <span class="o">=</span> <span class="s">"hellow wrld"</span><span class="o">;</span>
         <span class="kt">char</span> <span class="n">firstLetter</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"First letter : "</span> <span class="o">+</span> <span class="n">firstLetter</span><span class="o">);</span>
@@ -173,26 +167,22 @@ window.onload = wrap_img;
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">PrimitiveTypesExample</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">// int example with wrapper class</span>
         <span class="nc">Integer</span><span class="o">[]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">};</span>
         <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">stream</span><span class="o">(</span><span class="n">numbers</span><span class="o">).</span><span class="na">mapToInt</span><span class="o">(</span><span class="nl">Integer:</span><span class="o">:</span><span class="n">intValue</span><span class="o">).</span><span class="na">sum</span><span class="o">();</span>
         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Sum of numbers: "</span> <span class="o">+</span> <span class="n">sum</span><span class="o">);</span>
 
         
-        <span class="c1">// double example with wrapper class</span>
         <span class="nc">Double</span><span class="o">[]</span> <span class="n">temperatures</span> <span class="o">=</span> <span class="o">{</span><span class="mf">25.6</span><span class="o">,</span> <span class="mf">28.9</span><span class="o">,</span> <span class="mf">30.1</span><span class="o">,</span> <span class="mf">23.4</span><span class="o">,</span> <span class="mf">21.0</span><span class="o">};</span>
         <span class="kt">double</span> <span class="n">average</span> <span class="o">=</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">stream</span><span class="o">(</span><span class="n">temperatures</span><span class="o">).</span><span class="na">mapToDouble</span><span class="o">(</span><span class="nl">Double:</span><span class="o">:</span><span class="n">doubleValue</span><span class="o">).</span><span class="na">average</span><span class="o">().</span><span class="na">getAsDouble</span><span class="o">();</span>
         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Average temperature: "</span> <span class="o">+</span> <span class="n">average</span><span class="o">);</span>
 
 
-        <span class="c1">// boolean example with wrapper class</span>
         <span class="kt">boolean</span><span class="o">[]</span> <span class="n">booleanArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">boolean</span><span class="o">[]{</span><span class="kc">true</span><span class="o">,</span> <span class="kc">false</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="kc">false</span><span class="o">,</span> <span class="kc">true</span><span class="o">};</span>
         <span class="kt">boolean</span> <span class="n">randomBoolean</span> <span class="o">=</span> <span class="n">booleanArray</span><span class="o">[(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()</span> <span class="o">*</span> <span class="n">booleanArray</span><span class="o">.</span><span class="na">length</span><span class="o">)];</span>
         <span class="nc">Boolean</span><span class="o">[]</span> <span class="n">booleanArray</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Boolean</span><span class="o">[]{</span><span class="kc">true</span><span class="o">,</span> <span class="kc">false</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="kc">false</span><span class="o">,</span> <span class="kc">true</span><span class="o">};</span>
         <span class="nc">Boolean</span> <span class="n">randomBoolean</span> <span class="o">=</span> <span class="n">booleanArray</span><span class="o">[(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()</span> <span class="o">*</span> <span class="n">booleanArray</span><span class="o">.</span><span class="na">length</span><span class="o">)];</span>
 
 
-        <span class="c1">// char example with wrapper class</span>
         <span class="nc">String</span> <span class="n">charString</span> <span class="o">=</span> <span class="s">"hello world"</span><span class="o">;</span>
         <span class="kt">char</span><span class="o">[]</span> <span class="n">charArray</span> <span class="o">=</span> <span class="n">charString</span><span class="o">.</span><span class="na">toCharArray</span><span class="o">();</span>
         <span class="nc">String</span> <span class="n">randomCharString</span> <span class="o">=</span> <span class="n">charString</span><span class="o">.</span><span class="na">substring</span><span class="o">((</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()</span> <span class="o">*</span> <span class="n">charString</span><span class="o">.</span><span class="na">length</span><span class="o">()),</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()</span> <span class="o">*</span> <span class="n">charString</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">+</span> <span class="mi">1</span><span class="o">));</span>
