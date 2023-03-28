@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      1 min read
     
 </span></p>
 
@@ -125,6 +125,12 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Linked-Lists">Linked Lists<a class="anchor-link" href="#Linked-Lists"> </a></h2>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -132,103 +138,221 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Collections</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.LinkedList</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.Queue</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.Stack</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.LinkedList</span><span class="p">;</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ListQueueStackExample</span> <span class="p">{</span>
+<span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">testlink</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// Create a linked list and add some elements to it</span>
-        <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">linkedList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-        <span class="n">linkedList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">);</span>
-        <span class="n">linkedList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span>
-        <span class="n">linkedList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Cherry&quot;</span><span class="p">);</span>
-        <span class="n">linkedList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Date&quot;</span><span class="p">);</span>
+<span class="n">testlink</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Strings&quot;</span><span class="p">);</span>
+<span class="n">testlink</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Data&quot;</span><span class="p">);</span>
+<span class="n">testlink</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;BST&quot;</span><span class="p">);</span>
 
-        <span class="c1">// Print the linked list</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Linked List: &quot;</span> <span class="o">+</span> <span class="n">linkedList</span><span class="p">);</span>
-
-        <span class="c1">// Create a queue and add some elements to it</span>
-        <span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">);</span>
-        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span>
-        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Cherry&quot;</span><span class="p">);</span>
-        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Date&quot;</span><span class="p">);</span>
-
-        <span class="c1">// Print the queue</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Queue: &quot;</span> <span class="o">+</span> <span class="n">queue</span><span class="p">);</span>
-
-        <span class="c1">// Remove an element from the queue and print it</span>
-        <span class="n">String</span> <span class="n">removedElement</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Removed element from Queue: &quot;</span> <span class="o">+</span> <span class="n">removedElement</span><span class="p">);</span>
-
-        <span class="c1">// Create another queue and add some elements to it</span>
-        <span class="n">Queue</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">queue2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-        <span class="n">queue2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-        <span class="n">queue2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
-        <span class="n">queue2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-        <span class="n">queue2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
-
-        <span class="c1">// Merge the two queues into a new, ordered queue</span>
-        <span class="n">Queue</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">mergedQueue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">queue</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">queue2</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="na">peek</span><span class="p">().</span><span class="na">compareTo</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">queue2</span><span class="p">.</span><span class="na">peek</span><span class="p">()))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">mergedQueue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">());</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="n">mergedQueue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">queue2</span><span class="p">.</span><span class="na">remove</span><span class="p">());</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">queue</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
-            <span class="n">mergedQueue</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">queue2</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
-            <span class="n">mergedQueue</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">queue2</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="c1">// Print the merged queue</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Merged Queue: &quot;</span> <span class="o">+</span> <span class="n">mergedQueue</span><span class="p">);</span>
-
-        <span class="c1">// Reverse the second queue using a stack</span>
-        <span class="n">Queue</span><span class="o">&lt;</span><span class="n">Character</span><span class="o">&gt;</span> <span class="n">queue3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-        <span class="n">queue3</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="sc">&#39;A&#39;</span><span class="p">);</span>
-        <span class="n">queue3</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="sc">&#39;B&#39;</span><span class="p">);</span>
-        <span class="n">queue3</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="sc">&#39;C&#39;</span><span class="p">);</span>
-        <span class="n">queue3</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="sc">&#39;D&#39;</span><span class="p">);</span>
-
-        <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Character</span><span class="o">&gt;</span> <span class="n">stack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">queue3</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
-            <span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">queue3</span><span class="p">.</span><span class="na">remove</span><span class="p">());</span>
-        <span class="p">}</span>
-        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">stack</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
-            <span class="n">queue3</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
-        <span class="p">}</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Reversed Queue: &quot;</span> <span class="o">+</span> <span class="n">queue3</span><span class="p">);</span>
-
-        <span class="c1">// Implement a stack from the linked list</span>
-        <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">linkedList2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-        <span class="n">linkedList2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-        <span class="n">linkedList2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-        <span class="n">linkedList2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
-
-        <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">stack2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-        <span class="n">stack2</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">linkedList2</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Stack from Linked List: &quot;</span> <span class="o">+</span> <span class="n">stack2</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="n">ListQueueStackExample</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">testlink</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[Strings, Data, BST]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">testlink</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span> 
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">testlink</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[Data, BST]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">testlink</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">testlink</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">testlink</span><span class="p">.</span><span class="na">getFirst</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">testlink</span><span class="p">.</span><span class="na">getLast</span><span class="p">());</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">java.util.NoSuchElementException: null</span>
+<span class="ansi-red-intense-fg ansi-bold">	at java.base/java.util.LinkedList.getFirst(LinkedList.java:248)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at .(#26:1)</span></pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Queues">Queues<a class="anchor-link" href="#Queues"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">Articles</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="n">Articles</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;BST Tutorial&quot;</span><span class="p">);</span>
+<span class="n">Articles</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Checkpoint 1&quot;</span><span class="p">);</span>
+<span class="n">Articles</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Wrapper Classes&quot;</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Articles</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[BST Tutorial, Checkpoint 1, Wrapper Classes]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Articles</span><span class="p">.</span><span class="na">poll</span><span class="p">();</span> 
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Articles</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Articles</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;BST Tutorial&quot;</span><span class="p">));</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[Checkpoint 1, Wrapper Classes]
+false
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Stacks">Stacks<a class="anchor-link" href="#Stacks"> </a></h2>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -237,18 +361,31 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Stack</span><span class="p">;</span>
-<span class="n">Stack</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">coaches</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">Stack</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">tags</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
 
-<span class="n">coaches</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Darvin Ham&quot;</span><span class="p">);</span>
-<span class="n">coaches</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Nick Nurse&quot;</span><span class="p">);</span>
-<span class="n">coaches</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Monty Williams&quot;</span><span class="p">);</span>
-<span class="n">coaches</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Greg Popovich&quot;</span><span class="p">);</span>
-<span class="n">coaches</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Steve Kerr&quot;</span><span class="p">);</span>
+<span class="n">tags</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;C++&quot;</span><span class="p">);</span>
+<span class="n">tags</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Java&quot;</span><span class="p">);</span>
+<span class="n">tags</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;HTML&quot;</span><span class="p">);</span>
+<span class="n">tags</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Javascript&quot;</span><span class="p">);</span>
 
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">coaches</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tags</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[C++, Java, HTML, Javascript]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -262,158 +399,42 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">coaches</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span> <span class="c1">// get and remove first element</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">coaches</span><span class="p">);</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">coaches</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;Mike Budenholzer&quot;</span><span class="p">));</span> <span class="c1">// .set(index, element)  --&gt; replace element at an index</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">coaches</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+<div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tags</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span> 
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tags</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tags</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;Python&quot;</span><span class="p">));</span> 
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tags</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Javascript
+[C++, Java, HTML]
+Java
+3
+</pre>
 </div>
-    
+</div>
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Collections</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.LinkedList</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.Queue</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.Stack</span><span class="p">;</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">QuizExample</span> <span class="p">{</span>
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// Create a linked list of questions and add some elements to it</span>
-        <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">questionList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-        <span class="n">questionList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;What is the capital of France?&quot;</span><span class="p">);</span>
-        <span class="n">questionList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Who wrote the novel &#39;To Kill a Mockingbird&#39;?&quot;</span><span class="p">);</span>
-        <span class="n">questionList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;What is the smallest planet in our solar system?&quot;</span><span class="p">);</span>
-        <span class="n">questionList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;What is the highest mountain in the world?&quot;</span><span class="p">);</span>
-        
-        <span class="c1">// Print the linked list of questions</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Question List: &quot;</span> <span class="o">+</span> <span class="n">questionList</span><span class="p">);</span>
-        
-        <span class="c1">// Create a queue of student answers and add some elements to it</span>
-        <span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">studentAnswers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-        <span class="n">studentAnswers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Paris&quot;</span><span class="p">);</span>
-        <span class="n">studentAnswers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Harper Lee&quot;</span><span class="p">);</span>
-        <span class="n">studentAnswers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Mercury&quot;</span><span class="p">);</span>
-        <span class="n">studentAnswers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Mount Everest&quot;</span><span class="p">);</span>
-        
-        <span class="c1">// Print the queue of student answers</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Student Answers Queue: &quot;</span> <span class="o">+</span> <span class="n">studentAnswers</span><span class="p">);</span>
-        
-        <span class="c1">// Remove an answer from the queue and print it</span>
-        <span class="n">String</span> <span class="n">removedAnswer</span> <span class="o">=</span> <span class="n">studentAnswers</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Removed Answer from Queue: &quot;</span> <span class="o">+</span> <span class="n">removedAnswer</span><span class="p">);</span>
-        
-        <span class="c1">// Create another queue of correct answers and add some elements to it</span>
-        <span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">correctAnswers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-        <span class="n">correctAnswers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Paris&quot;</span><span class="p">);</span>
-        <span class="n">correctAnswers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Harper Lee&quot;</span><span class="p">);</span>
-        <span class="n">correctAnswers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Mercury&quot;</span><span class="p">);</span>
-        <span class="n">correctAnswers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Mount Everest&quot;</span><span class="p">);</span>
-        
-        <span class="c1">// Merge the two queues into a new, ordered queue</span>
-        <span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">mergedQueue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">studentAnswers</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">correctAnswers</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">studentAnswers</span><span class="p">.</span><span class="na">peek</span><span class="p">().</span><span class="na">compareTo</span><span class="p">(</span><span class="n">correctAnswers</span><span class="p">.</span><span class="na">peek</span><span class="p">())</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">mergedQueue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">studentAnswers</span><span class="p">.</span><span class="na">remove</span><span class="p">());</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="n">mergedQueue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">correctAnswers</span><span class="p">.</span><span class="na">remove</span><span class="p">());</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">studentAnswers</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
-            <span class="n">mergedQueue</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">studentAnswers</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">correctAnswers</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
-            <span class="n">mergedQueue</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">correctAnswers</span><span class="p">);</span>
-        <span class="p">}</span>
-        
-        <span class="c1">// Print the merged queue</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Merged Queue: &quot;</span> <span class="o">+</span> <span class="n">mergedQueue</span><span class="p">);</span>
-        
-        <span class="c1">// Shuffle the first queue of student answers</span>
-        <span class="n">Collections</span><span class="p">.</span><span class="na">shuffle</span><span class="p">((</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">)</span> <span class="n">studentAnswers</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Shuffled Student Answers Queue: &quot;</span> <span class="o">+</span> <span class="n">studentAnswers</span><span class="p">);</span>
-        
-        <span class="c1">// Reverse the second queue of correct answers using a stack</span>
-        <span class="n">Queue</span><span class="o">&lt;</span><span class="n">Character</span><span class="o">&gt;</span> <span class="n">correctAnswersQueue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-        <span class="n">correctAnswersQueue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="sc">&#39;A&#39;</span><span class="p">);</span>
-        <span class="n">correctAnswersQueue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="sc">&#39;B&#39;</span><span class="p">);</span>
-        <span class="n">correctAnswersQueue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="sc">&#39;C&#39;</span><span class="p">);</span>
-        <span class="n">correctAnswersQueue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="sc">&#39;D&#39;</span><span class="p">);</span>
-        
-        <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Character</span><span class="o">&gt;</span> <span class="n">correctAnswersStack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">correctAnswersQueue</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
-            <span class="n">correctAnswersStack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">correctAnswersQueue</span><span class="p">.</span><span class="na">remove</span><span class="p">());</span>
-        <span class="p">}</span>
-        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">correctAnswersStack</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
-            <span class="n">correctAnswersQueue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">correctAnswersStack</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
-        <span class="p">}</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Reversed Correct Answers Queue: &quot;</span> <span class="o">+</span> <span class="n">correctAnswersQueue</span><span class="p">);</span>
-        
-        <span class="c1">// Implement a stack of scores from the linked list of questions</span>
-        <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">scoresList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-        <span class="n">scoresList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-        <span class="n">scoresList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-        <span class="n">scoresList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
-        
-        <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">scoreStack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-        <span class="n">scoreStack</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">scoresList</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Score Stack from Linked List: &quot;</span> <span class="o">+</span> <span class="n">scoreStack</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="n">QuizExample</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
 </div>
     
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Enhanced</span><span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
-        <span class="kt">int</span><span class="o">[][]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">][</span><span class="mi">20</span><span class="o">]</span><span class="p">;</span>
-       <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">rows</span><span class="p">:</span> <span class="n">numbers</span><span class="p">){</span>
-            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">column</span><span class="p">:</span> <span class="n">rows</span><span class="p">){</span>
-                <span class="n">column</span> <span class="o">=</span> <span class="n">column</span> <span class="o">+</span> <span class="n">x</span><span class="p">;</span>
-                <span class="n">x</span><span class="o">++</span><span class="p">;</span>
-                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">column</span> <span class="o">+</span><span class="s">&quot; &quot;</span><span class="p">);</span>
-            <span class="p">}</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="n">Enhanced</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Collectables">Collectables<a class="anchor-link" href="#Collectables"> </a></h2>
 </div>
 </div>
-
 </div>
-    
-
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -422,7 +443,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CancodeUser</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
-    <span class="kd">private</span> <span class="n">T</span> <span class="n">user</span><span class="p">;</span> <span class="c1">// represents the type of NBA player</span>
+    <span class="kd">private</span> <span class="n">T</span> <span class="n">user</span><span class="p">;</span> 
     
     <span class="kd">public</span> <span class="nf">CancodeUser</span><span class="p">(</span><span class="n">T</span> <span class="n">user</span><span class="p">)</span> <span class="p">{</span>
        <span class="k">this</span><span class="p">.</span><span class="na">user</span> <span class="o">=</span> <span class="n">user</span><span class="p">;</span>
@@ -441,14 +462,31 @@ window.onload = wrap_img;
        <span class="n">CancodeUser</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">user2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CancodeUser</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="s">&quot;Evan Y&quot;</span><span class="p">);</span>
        <span class="n">CancodeUser</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">user3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CancodeUser</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="s">&quot;Lionel Messi&quot;</span><span class="p">);</span>
  
-       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">user1</span><span class="p">.</span><span class="na">getPlayer</span><span class="p">());</span> 
-       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">user2</span><span class="p">.</span><span class="na">getPlayer</span><span class="p">());</span>
-       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">user3</span><span class="p">.</span><span class="na">getPlayer</span><span class="p">());</span>
+       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">user1</span><span class="p">.</span><span class="na">getUser</span><span class="p">());</span> 
+       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">user2</span><span class="p">.</span><span class="na">getUser</span><span class="p">());</span>
+       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">user3</span><span class="p">.</span><span class="na">getUser</span><span class="p">());</span>
     <span class="p">}</span>
  <span class="p">}</span>
+<span class="n">CancodeUser</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Sanjay B
+Evan Y
+Lionel Messi
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
