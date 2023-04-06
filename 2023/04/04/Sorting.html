@@ -171,6 +171,20 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Original: 23, 56, 21, 34, 678, 2, 4, 7, 2235, 996, 446, 999, 6574, 87, 67, 902, 8754, 
+Sorted: 2, 4, 7, 21, 23, 34, 56, 67, 87, 446, 678, 902, 996, 999, 2235, 6574, 8754, </pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -199,26 +213,26 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Insertion</span><span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
-      <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="p">{</span><span class="mi">16</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">123</span><span class="p">,</span><span class="mi">617</span><span class="p">,</span><span class="mi">261</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span><span class="mi">126</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">1236</span><span class="p">};</span>
+      <span class="kt">int</span><span class="o">[]</span> <span class="n">list</span> <span class="o">=</span> <span class="p">{</span><span class="mi">16</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">617</span><span class="p">,</span><span class="mi">261</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span><span class="mi">126</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">1236</span><span class="p">};</span>
       
-      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span><span class="p">);</span>
+      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">list</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span><span class="p">);</span>
       <span class="p">}</span>
       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
 
       
-      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">index</span><span class="o">&lt;</span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">index</span><span class="o">++</span><span class="p">){</span>
+      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">index</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">index</span><span class="o">&lt;</span><span class="n">list</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">index</span><span class="o">++</span><span class="p">){</span>
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">sorted_index</span> <span class="o">=</span> <span class="n">index</span><span class="p">;</span> <span class="n">sorted_index</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">;</span> <span class="n">sorted_index</span><span class="o">--</span><span class="p">){</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">sorted_index</span><span class="o">]&lt;</span><span class="n">array</span><span class="o">[</span><span class="n">sorted_index</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">){</span>
-                <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">array</span><span class="o">[</span><span class="n">sorted_index</span><span class="o">]</span><span class="p">;</span>
-                <span class="n">array</span><span class="o">[</span><span class="n">sorted_index</span><span class="o">]</span> <span class="o">=</span> <span class="n">array</span><span class="o">[</span><span class="n">sorted_index</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
-                <span class="n">array</span><span class="o">[</span><span class="n">sorted_index</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">list</span><span class="o">[</span><span class="n">sorted_index</span><span class="o">]&lt;</span><span class="n">list</span><span class="o">[</span><span class="n">sorted_index</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">){</span>
+                <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">list</span><span class="o">[</span><span class="n">sorted_index</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">list</span><span class="o">[</span><span class="n">sorted_index</span><span class="o">]</span> <span class="o">=</span> <span class="n">list</span><span class="o">[</span><span class="n">sorted_index</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">list</span><span class="o">[</span><span class="n">sorted_index</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
             <span class="p">}</span>
         <span class="p">}</span>
       <span class="p">}</span>
       
-      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span><span class="p">);</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">list</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span><span class="p">);</span>
       <span class="p">}</span>
     
     <span class="p">}</span>
@@ -230,6 +244,20 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>16, 3, 26, 617, 261, 51, 126, 6, 23, 2, 16, 1236, 
+2, 3, 6, 16, 16, 23, 26, 51, 126, 261, 617, 1236, </pre>
+</div>
+</div>
+
 </div>
 </div>
 
