@@ -418,18 +418,18 @@ the time complexity of the Selection Sort algorithm is O(n^2).</p>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hash</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
-        <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">hashmap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">numberhash</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
         <span class="kt">int</span><span class="o">[]</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5000</span><span class="o">]</span><span class="p">;</span>
 
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">list</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">Integer</span> <span class="n">value</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">5000</span><span class="p">);</span>
-            <span class="n">hashmap</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+            <span class="n">numberhash</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
             <span class="n">list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">12</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Run &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
             <span class="n">Integer</span> <span class="n">target</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">5000</span><span class="p">);</span>
-            <span class="kt">long</span> <span class="n">lookUpTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">lookUp</span><span class="p">(</span><span class="n">hashmap</span><span class="p">,</span> <span class="n">target</span><span class="p">));</span>
+            <span class="kt">long</span> <span class="n">lookUpTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">lookUp</span><span class="p">(</span><span class="n">numberhash</span><span class="p">,</span> <span class="n">target</span><span class="p">));</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Look up time: &quot;</span> <span class="o">+</span> <span class="n">lookUpTime</span> <span class="o">+</span> <span class="s">&quot; nanoseconds&quot;</span><span class="p">);</span>
             <span class="kt">long</span> <span class="n">binarySearchTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">binarySearchTime</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">target</span><span class="p">));</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Binary search time: &quot;</span> <span class="o">+</span> <span class="n">binarySearchTime</span> <span class="o">+</span> <span class="s">&quot; nanoseconds&quot;</span><span class="p">);</span>    
@@ -478,41 +478,41 @@ the time complexity of the Selection Sort algorithm is O(n^2).</p>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Run 1
-Look up time: 2625 nanoseconds
-Binary search time: 2250 nanoseconds
+Look up time: 875 nanoseconds
+Binary search time: 2000 nanoseconds
 Run 2
-Look up time: 500 nanoseconds
-Binary search time: 1750 nanoseconds
-Run 3
-Look up time: 417 nanoseconds
-Binary search time: 1750 nanoseconds
-Run 4
-Look up time: 500 nanoseconds
-Binary search time: 1542 nanoseconds
-Run 5
-Look up time: 500 nanoseconds
+Look up time: 1375 nanoseconds
 Binary search time: 1792 nanoseconds
-Run 6
-Look up time: 417 nanoseconds
-Binary search time: 1750 nanoseconds
-Run 7
+Run 3
+Look up time: 500 nanoseconds
+Binary search time: 1584 nanoseconds
+Run 4
+Look up time: 584 nanoseconds
+Binary search time: 1875 nanoseconds
+Run 5
 Look up time: 1000 nanoseconds
-Binary search time: 2042 nanoseconds
+Binary search time: 2292 nanoseconds
+Run 6
+Look up time: 1125 nanoseconds
+Binary search time: 2166 nanoseconds
+Run 7
+Look up time: 541 nanoseconds
+Binary search time: 1667 nanoseconds
 Run 8
-Look up time: 458 nanoseconds
+Look up time: 541 nanoseconds
 Binary search time: 1625 nanoseconds
 Run 9
-Look up time: 500 nanoseconds
-Binary search time: 1833 nanoseconds
+Look up time: 1000 nanoseconds
+Binary search time: 2167 nanoseconds
 Run 10
-Look up time: 375 nanoseconds
-Binary search time: 1625 nanoseconds
+Look up time: 1250 nanoseconds
+Binary search time: 2000 nanoseconds
 Run 11
-Look up time: 458 nanoseconds
-Binary search time: 1792 nanoseconds
+Look up time: 1042 nanoseconds
+Binary search time: 2458 nanoseconds
 Run 12
-Look up time: 625 nanoseconds
-Binary search time: 1917 nanoseconds
+Look up time: 1125 nanoseconds
+Binary search time: 2958 nanoseconds
 </pre>
 </div>
 </div>
