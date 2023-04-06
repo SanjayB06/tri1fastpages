@@ -428,9 +428,10 @@ the time complexity of the Selection Sort algorithm is O(n^2).</p>
         <span class="p">}</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">12</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Run &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
-            <span class="kt">long</span> <span class="n">lookUpTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">lookUp</span><span class="p">(</span><span class="n">hashmap</span><span class="p">,</span> <span class="mi">12</span><span class="p">));</span>
+            <span class="n">Integer</span> <span class="n">target</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">5000</span><span class="p">);</span>
+            <span class="kt">long</span> <span class="n">lookUpTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">lookUp</span><span class="p">(</span><span class="n">hashmap</span><span class="p">,</span> <span class="n">target</span><span class="p">));</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Look up time: &quot;</span> <span class="o">+</span> <span class="n">lookUpTime</span> <span class="o">+</span> <span class="s">&quot; nanoseconds&quot;</span><span class="p">);</span>
-            <span class="kt">long</span> <span class="n">binarySearchTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">binarySearchTime</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="mi">12</span><span class="p">));</span>
+            <span class="kt">long</span> <span class="n">binarySearchTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">binarySearchTime</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="n">target</span><span class="p">));</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Binary search time: &quot;</span> <span class="o">+</span> <span class="n">binarySearchTime</span> <span class="o">+</span> <span class="s">&quot; nanoseconds&quot;</span><span class="p">);</span>    
         <span class="p">}</span>
         
@@ -477,41 +478,41 @@ the time complexity of the Selection Sort algorithm is O(n^2).</p>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Run 1
-Look up time: 2625 nanoseconds
-Binary search time: 2250 nanoseconds
+Look up time: 50291 nanoseconds
+Binary search time: 2875 nanoseconds
 Run 2
-Look up time: 500 nanoseconds
-Binary search time: 1750 nanoseconds
+Look up time: 875 nanoseconds
+Binary search time: 1916 nanoseconds
 Run 3
-Look up time: 417 nanoseconds
-Binary search time: 1750 nanoseconds
-Run 4
-Look up time: 500 nanoseconds
+Look up time: 833 nanoseconds
 Binary search time: 1542 nanoseconds
-Run 5
-Look up time: 500 nanoseconds
-Binary search time: 1792 nanoseconds
-Run 6
-Look up time: 417 nanoseconds
-Binary search time: 1750 nanoseconds
-Run 7
-Look up time: 1000 nanoseconds
-Binary search time: 2042 nanoseconds
-Run 8
+Run 4
 Look up time: 458 nanoseconds
-Binary search time: 1625 nanoseconds
+Binary search time: 1708 nanoseconds
+Run 5
+Look up time: 709 nanoseconds
+Binary search time: 1708 nanoseconds
+Run 6
+Look up time: 834 nanoseconds
+Binary search time: 1583 nanoseconds
+Run 7
+Look up time: 583 nanoseconds
+Binary search time: 1500 nanoseconds
+Run 8
+Look up time: 750 nanoseconds
+Binary search time: 1500 nanoseconds
 Run 9
-Look up time: 500 nanoseconds
-Binary search time: 1833 nanoseconds
+Look up time: 625 nanoseconds
+Binary search time: 1541 nanoseconds
 Run 10
-Look up time: 375 nanoseconds
+Look up time: 625 nanoseconds
 Binary search time: 1625 nanoseconds
 Run 11
-Look up time: 458 nanoseconds
-Binary search time: 1792 nanoseconds
+Look up time: 666 nanoseconds
+Binary search time: 1584 nanoseconds
 Run 12
-Look up time: 625 nanoseconds
-Binary search time: 1917 nanoseconds
+Look up time: 459 nanoseconds
+Binary search time: 1667 nanoseconds
 </pre>
 </div>
 </div>
