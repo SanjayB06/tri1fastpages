@@ -386,7 +386,7 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="p">;</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArrayResizer</span>
-
+<span class="c1">// 6/9 Code is function now, but some mistakes were made. There were logical errors inside some of the methods (iterable was incremented more than once)</span>
 <span class="p">{</span>
 
 <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isNonZeroRow</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">array2D</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span> 
@@ -792,7 +792,7 @@ Number of Non Zero Arrays: 2
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClubMembers</span>
 
 <span class="p">{</span>
-
+<span class="c1">// 5/9 Output was messed up at first, no to string method. Arraylist syntax was incorrect: no .get and .size was used, bracket notation and .length used instead</span>
 <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span> <span class="n">memberList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 
  
@@ -1167,7 +1167,7 @@ Number of Non Zero Arrays: 2
 
 <span class="p">{</span>
 
-
+<span class="c1">// 5/9. implementation for getCheck was incorrect, logical errors were present. Methods were called incorrectly. </span>
 <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getCheck</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
 
 <span class="p">{</span>
@@ -1266,7 +1266,8 @@ true
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AdditionPattern</span> <span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//9/9 All methods worked and all output matched collegeboard example</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AdditionPattern</span> <span class="p">{</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">currentnum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">increment</span><span class="p">;</span>
     <span class="kd">public</span> <span class="nf">AdditionPattern</span><span class="p">(</span><span class="kt">int</span> <span class="n">start</span><span class="p">,</span><span class="kt">int</span> <span class="n">increment</span><span class="p">)</span> <span class="p">{</span>

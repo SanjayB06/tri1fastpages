@@ -133,43 +133,43 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Date</span><span class="p">;</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Athlete</span> <span class="p">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Food</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
     <span class="kd">public</span> <span class="kt">int</span> <span class="n">id</span><span class="p">;</span>
     <span class="n">String</span> <span class="n">entryTime</span><span class="p">;</span>
-    <span class="kd">private</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Athlete</span><span class="o">&gt;</span> <span class="n">directory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Athlete</span><span class="o">&gt;</span><span class="p">();</span>
-    <span class="kd">public</span> <span class="nf">Athlete</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Food</span><span class="o">&gt;</span> <span class="n">directory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Food</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="kd">public</span> <span class="nf">Food</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="c1">// Part 1.1 --&gt; 1 argument constructor for name</span>
-    <span class="kd">public</span> <span class="nf">Athlete</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Food</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
-        <span class="c1">// Part 1.3 --&gt; Unique ID for each object by adding athlete to arraylist</span>
-        <span class="n">Athlete</span><span class="p">.</span><span class="na">directory</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">getAthleteCount</span><span class="p">();</span>
-        <span class="c1">// Part 2.4 --&gt; Add time when Athlete enters directory</span>
+        <span class="c1">// Part 1.3 --&gt; Unique ID for each object by adding Food to arraylist</span>
+        <span class="n">Food</span><span class="p">.</span><span class="na">directory</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">getFoodCount</span><span class="p">();</span>
+        <span class="c1">// Part 2.4 --&gt; Add time when Food enters directory</span>
         <span class="n">Date</span> <span class="n">date</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="p">();</span>
         <span class="k">this</span><span class="p">.</span><span class="na">entryTime</span> <span class="o">=</span> <span class="n">date</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
     <span class="p">}</span>
-    <span class="c1">// Part 1.2 --&gt; toString method to display athlete name and id</span>
+    <span class="c1">// Part 1.2 --&gt; toString method to display Food name and id</span>
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
-        <span class="k">return</span> <span class="p">(</span><span class="s">&quot;Athlete name: &#39;&quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">+</span> <span class="s">&quot;&#39;. Athlete ID: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">+</span> <span class="s">&quot;. Entry time: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">entryTime</span><span class="p">);</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s">&quot;Food name: &#39;&quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">+</span> <span class="s">&quot;&#39;. Food ID: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">+</span> <span class="s">&quot;. Entry time: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">entryTime</span><span class="p">);</span>
     <span class="p">}</span>
-    <span class="c1">// Part 1.4 --&gt; Public getter for Athlete count that returns the size of the array with the athlete names</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getAthleteCount</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">Athlete</span><span class="p">.</span><span class="na">directory</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+    <span class="c1">// Part 1.4 --&gt; Public getter for Food count that returns the size of the array with the Food names</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getFoodCount</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">Food</span><span class="p">.</span><span class="na">directory</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
     <span class="p">}</span>
-    <span class="c1">// Part 1.5 --&gt; Tester Method that initializes 2 athletes...</span>
+    <span class="c1">// Part 1.5 --&gt; Tester Method that initializes 2 Foods...</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Athlete</span> <span class="n">lebron</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Athlete</span><span class="p">(</span><span class="s">&quot;LeBron James&quot;</span><span class="p">);</span>
-        <span class="n">Athlete</span> <span class="n">messi</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Athlete</span><span class="p">(</span><span class="s">&quot;Lionel Messi&quot;</span><span class="p">);</span>
+        <span class="n">Food</span> <span class="n">lebron</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Food</span><span class="p">(</span><span class="s">&quot;Pizza&quot;</span><span class="p">);</span>
+        <span class="n">Food</span> <span class="n">messi</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Food</span><span class="p">(</span><span class="s">&quot;Lionel Messi&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">lebron</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">messi</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">messi</span><span class="p">.</span><span class="na">getAthleteCount</span><span class="p">());</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">messi</span><span class="p">.</span><span class="na">getFoodCount</span><span class="p">());</span>
     <span class="p">}</span>
 <span class="p">}</span>
-<span class="n">Athlete</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="n">Food</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -182,8 +182,8 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Athlete name: &#39;LeBron James&#39;. Athlete ID: 1. Entry time: Wed Apr 26 11:43:20 PDT 2023
-Athlete name: &#39;Lionel Messi&#39;. Athlete ID: 2. Entry time: Wed Apr 26 11:43:20 PDT 2023
+<pre>Food name: &#39;LeBron James&#39;. Food ID: 1. Entry time: Thu Apr 27 12:40:54 PDT 2023
+Food name: &#39;Lionel Messi&#39;. Food ID: 2. Entry time: Thu Apr 27 12:40:54 PDT 2023
 2
 </pre>
 </div>
