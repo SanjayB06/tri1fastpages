@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Extra Credit Modifying Book Class | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Extra Credit Modifying Book Class" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://sanjayb06.github.io/tri1fastpages/2023/04/26/ExtraCredit.html" />
+<meta property="og:url" content="https://sanjayb06.github.io/tri1fastpages/2023/04/26/ExtraCredit.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-26T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Extra Credit Modifying Book Class" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-26T00:00:00-05:00","datePublished":"2023-04-26T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Extra Credit Modifying Book Class","mainEntityOfPage":{"@type":"WebPage","@id":"https://sanjayb06.github.io/tri1fastpages/2023/04/26/ExtraCredit.html"},"url":"https://sanjayb06.github.io/tri1fastpages/2023/04/26/ExtraCredit.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/tri1fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sanjayb06.github.io/tri1fastpages/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/tri1fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/tri1fastpages/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/tri1fastpages/about/">About Me</a><a class="page-link" href="/tri1fastpages/gradecalc/">Grade Calculator</a><a class="page-link" href="/tri1fastpages/search/">Search</a><a class="page-link" href="/tri1fastpages/categories/">Tags</a><a class="page-link" href="/tri1fastpages/vocab/">Vocab</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Extra Credit Modifying Book Class</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-26T00:00:00-05:00" itemprop="datePublished">
+        Apr 26, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/SanjayB06/tri1fastpages/tree/master/_notebooks/2023-04-26-ExtraCredit.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/tri1fastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/SanjayB06/tri1fastpages/master?filepath=_notebooks%2F2023-04-26-ExtraCredit.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/tri1fastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/SanjayB06/tri1fastpages/blob/master/_notebooks/2023-04-26-ExtraCredit.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/tri1fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FSanjayB06%2Ftri1fastpages%2Fblob%2Fmaster%2F_notebooks%2F2023-04-26-ExtraCredit.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/tri1fastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-04-26-ExtraCredit.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Date</span><span class="p">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Athlete</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">id</span><span class="p">;</span>
+    <span class="n">String</span> <span class="n">entryTime</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Athlete</span><span class="o">&gt;</span> <span class="n">directory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Athlete</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="kd">public</span> <span class="nf">Athlete</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// Part 1.1 --&gt; 1 argument constructor for name</span>
+    <span class="kd">public</span> <span class="nf">Athlete</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+        <span class="c1">// Part 1.3 --&gt; Unique ID for each object by adding athlete to arraylist</span>
+        <span class="n">Athlete</span><span class="p">.</span><span class="na">directory</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">getAthleteCount</span><span class="p">();</span>
+        <span class="c1">// Part 2.4 --&gt; Add time when Athlete enters directory</span>
+        <span class="n">Date</span> <span class="n">date</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">entryTime</span> <span class="o">=</span> <span class="n">date</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="c1">// Part 1.2 --&gt; toString method to display athlete name and id</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s">&quot;Athlete name: &#39;&quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">+</span> <span class="s">&quot;&#39;. Athlete ID: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">+</span> <span class="s">&quot;. Entry time: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">entryTime</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">// Part 1.4 --&gt; Public getter for Athlete count that returns the size of the array with the athlete names</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getAthleteCount</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">Athlete</span><span class="p">.</span><span class="na">directory</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="c1">// Part 1.5 --&gt; Tester Method that initializes 2 athletes...</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Athlete</span> <span class="n">lebron</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Athlete</span><span class="p">(</span><span class="s">&quot;LeBron James&quot;</span><span class="p">);</span>
+        <span class="n">Athlete</span> <span class="n">messi</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Athlete</span><span class="p">(</span><span class="s">&quot;Lionel Messi&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">lebron</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">messi</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">messi</span><span class="p">.</span><span class="na">getAthleteCount</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Athlete</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Athlete name: &#39;LeBron James&#39;. Athlete ID: 1. Entry time: Wed Apr 26 11:43:20 PDT 2023
+Athlete name: &#39;Lionel Messi&#39;. Athlete ID: 2. Entry time: Wed Apr 26 11:43:20 PDT 2023
+2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Part 2.1 --&gt; Basketball runs the Constructor from Athlete</span>
+<span class="kd">class</span> <span class="nc">Basketball</span> <span class="kd">extends</span> <span class="n">Athlete</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">draft</span><span class="p">;</span>
+    <span class="c1">// Part 2.2 --&gt; Instance variable Draft which is unique to Basketball</span>
+    <span class="kd">public</span> <span class="nf">Basketball</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">draft</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">draft</span> <span class="o">=</span> <span class="n">draft</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// Part 2.3 --&gt; Make Getters and Setters for Draft</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getDraft</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">draft</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setDraft</span><span class="p">(</span><span class="n">String</span> <span class="n">draft</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">draft</span> <span class="o">=</span> <span class="n">draft</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s">&quot;Athlete name: &#39;&quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">+</span> <span class="s">&quot;&#39;. Athlete ID: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">+</span> <span class="s">&quot;. draft: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">draft</span> <span class="o">+</span> <span class="s">&quot;. Entry time: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">entryTime</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">// Part 2.5 for Basketball --&gt; Define tester method to test all items, adds 2 basketball players,shows athlete count before and after, prints items in directory</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Part 2.6 --&gt; Tester Method to test all items</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Before Directory Athlete Count: &quot;</span> <span class="o">+</span> <span class="n">Athlete</span><span class="p">.</span><span class="na">getAthleteCount</span><span class="p">());</span>  <span class="c1">// directory count is truly static across inheritance</span>
+        <span class="n">Basketball</span><span class="o">[]</span> <span class="n">bballPlayers</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="k">new</span> <span class="n">Basketball</span><span class="p">(</span><span class="s">&quot;Kevin Durant&quot;</span><span class="p">,</span> <span class="s">&quot;Round 1, Pick 2&quot;</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Basketball</span><span class="p">(</span><span class="s">&quot;Nikola Jokic&quot;</span><span class="p">,</span> <span class="s">&quot;Round 2, Pick 41&quot;</span><span class="p">)</span>
+        <span class="p">};</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">bballPlayers</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// Use of conventional loop for variation</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">bballPlayers</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>  <span class="c1">// still works with toString()</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;After Directory Athlete Count: &quot;</span> <span class="o">+</span> <span class="n">Athlete</span><span class="p">.</span><span class="na">getAthleteCount</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Basketball</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Before Directory Athlete Count: 2
+Athlete name: &#39;Kevin Durant&#39;. Athlete ID: 3. draft: Round 1, Pick 2. Entry time: Wed Apr 26 11:43:48 PDT 2023
+Athlete name: &#39;Nikola Jokic&#39;. Athlete ID: 4. draft: Round 2, Pick 41. Entry time: Wed Apr 26 11:43:48 PDT 2023
+After Directory Athlete Count: 4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Part 2.1 --&gt; Soccer runs the Constructor from Athlete</span>
+<span class="kd">class</span> <span class="nc">Soccer</span> <span class="kd">extends</span> <span class="n">Athlete</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">academy</span><span class="p">;</span>
+    <span class="c1">// Part 2.2 --&gt; Instance variable Academy which is unique to Soccer</span>
+    <span class="kd">public</span> <span class="nf">Soccer</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">academy</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">academy</span> <span class="o">=</span> <span class="n">academy</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// Part 2.3 --&gt; Make Getters and Setters for Academy</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getAcademy</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">academy</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAcademy</span><span class="p">(</span><span class="n">String</span> <span class="n">academy</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">academy</span> <span class="o">=</span> <span class="n">academy</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s">&quot;Athlete name: &#39;&quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">+</span> <span class="s">&quot;&#39;. Athlete ID: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">+</span> <span class="s">&quot;. academy: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">academy</span> <span class="o">+</span> <span class="s">&quot;. Entry time: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">entryTime</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">// Part 2.5 for Soccer --&gt; Define tester method to test all items, adds 2 soccer players,shows athlete count before and after, prints items in directory</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Part 2.6 --&gt; Tester Method to test all items</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Before Directory Athlete Count: &quot;</span> <span class="o">+</span> <span class="n">Athlete</span><span class="p">.</span><span class="na">getAthleteCount</span><span class="p">());</span>
+            <span class="n">Soccer</span><span class="o">[]</span> <span class="n">soccerPlayers</span> <span class="o">=</span> <span class="p">{</span>    <span class="c1">// Same technique as in Basketball tester</span>
+                <span class="k">new</span> <span class="n">Soccer</span><span class="p">(</span><span class="s">&quot;Antoine Griezmann&quot;</span><span class="p">,</span> <span class="s">&quot;Real Sociedad&quot;</span><span class="p">),</span>
+                <span class="k">new</span> <span class="n">Soccer</span><span class="p">(</span><span class="s">&quot;Rafael Leão&quot;</span><span class="p">,</span> <span class="s">&quot;Sporting CP&quot;</span><span class="p">)</span>
+            <span class="p">};</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">soccerPlayers</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">soccerPlayers</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;After Directory Athlete Count: &quot;</span> <span class="o">+</span> <span class="n">Athlete</span><span class="p">.</span><span class="na">getAthleteCount</span><span class="p">());</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Soccer</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Before Directory Athlete Count: 4
+Athlete name: &#39;Antoine Griezmann&#39;. Athlete ID: 5. academy: Real Sociedad. Entry time: Wed Apr 26 11:45:06 PDT 2023
+Athlete name: &#39;Rafael Leão&#39;. Athlete ID: 6. academy: Sporting CP. Entry time: Wed Apr 26 11:45:06 PDT 2023
+After Directory Athlete Count: 6
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/tri1fastpages/2023/04/26/ExtraCredit.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/tri1fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://sanjayb06.github.io/tri1fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/tri1fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="“https://github.com/nighthawkcoders”%7D" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/tri1fastpages/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="“https://twitter.com/NighthawkCoding”%7D" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/tri1fastpages/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="“https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q”%7D" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/tri1fastpages/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
